@@ -1,0 +1,21 @@
+<p class="pb-3">
+    Orhan Ekici yazılım dünyasında 20 yıllık bir deneyime sahip olan bir full stack developer'dır. Kariyerine tutkuyla bağlı olan Orhan Acunmedya Akademi'de yazılım eğitimi vermektedir ve öğrencilere teknolojiyi tutkuyla öğrenmelerini ve gelişmelerini teşvik etmektedir.
+</p>
+
+<p class="pb-3">
+    Hem ön uç hem de arka uç geliştirme konusunda uzmanlaşmış olan Orhan web geliştirme projelerinde geniş bir deneyime sahiptir. Yeniliklere açık olan ve teknolojinin hızla değişen doğasına ayak uydurabilen Orhan her zaman kendini geliştirmeye ve yeni teknolojilere adapte olmaya isteklidir.
+</p>
+
+<p class="pb-3">
+    Kendini sürekli olarak eğiten ve ilerleyen Orhan mesleğinde başarılı bir kariyere sahiptir ve öğrencilerine ilham vermektedir.
+</p>
+
+<p class="pb-3">
+    Orhan yazılım dünyasına duyduğu tutkuyla kariyerine adım atmış ve zamanla bu alanda kendini geliştirmiştir. Hem büyük ölçekli kurumsal projelerde hem de daha küçük ölçekli girişimlerde çalışarak geniş bir perspektif kazanmıştır.
+</p>
+
+<p class="pb-3">
+    Ayrıca Orhan'ın liderlik becerileri de dikkate değerdir. Ekip içinde iletişimi güçlendiren ve proje yönetiminde etkin bir rol oynayan Orhan ekibini motive etme ve ortak hedeflere yönlendirme konusunda başarılıdır. Aynı zamanda teknik bilgisiyle birleştirerek karmaşık sorunlara yaratıcı çözümler bulma yeteneğine sahiptir.
+</p>
+
+<p class="pb-3">Orhan Ekici yazılım dünyasında hem tecrübeli bir profesyonel hem de etkili bir eğitimci olarak tanınır. Bu deneyim ve liderlik becerileriyle hem projelerde hem de eğitim ortamlarında etkili bir şekilde çalışmaktadır.</p>

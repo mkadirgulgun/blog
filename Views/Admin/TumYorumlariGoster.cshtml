@@ -1,0 +1,37 @@
+﻿@model List<PostComment>
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2>Yorumlar</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col" width="5%">Post Id</th>
+            <th scope="col" width="20%">Ad</th>
+            <th scope="col" width="40%">Yorum</th>
+            <th scope="col" width="20%">Tarih</th>
+            <th scope="col" width="20%">#</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.PostId</td>
+                <td>@item.Name</td>
+                <td>@item.Comment</td>
+                <td>@item.CreatedDate</td>
+                <input type="hidden" name="@item.Id" value="@item.Id" />
+                <td>
+
+                    <a href="/admin/yorumsil/@item.Id" onclick="return confirm('Emin misin?')" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

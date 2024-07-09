@@ -1,0 +1,61 @@
+﻿@model List<PostComment>
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2>Yorumlar</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col" width="5%">Post Id</th>
+            <th scope="col" width="20%">Ad</th>
+            <th scope="col" width="40%">Yorum</th>
+            <th scope="col" width="20%">Tarih</th>
+            <th scope="col" width="20%">#</th>
+        </tr>
+    </thead>
+    <tbody>
+
+            @foreach(var item in Model){
+            <tr>
+                    <td>@item.PostId</td>
+                    <td>@item.Name</td>
+                    <td>@item.Comment</td>
+                    <td>@item.CreatedDate</td>
+                <input type="hidden" name="@item.Id" value="@item.Id"/>
+                <td>
+                        <a href="/admin/yorumonayla/@item.Id" class="btn btn-primary">Onayla</a>
+                    
+                        <a href="/admin/yorumsil/@item.Id" onclick="return confirm('Emin misin?')" class="btn btn-danger">Sil</a>
+                   @*  <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Launch demo modal
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Yorum Sil</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    @item.Comment silinecek. Emin misiniz?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> *@
+                </td>
+            </tr>
+            }
+
+    </tbody>
+</table>
+      

@@ -1,0 +1,32 @@
+﻿@model List<Post>
+@{
+    Layout = "_AdminLayout";
+}
+
+<h2>Yazılar</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col" width="40%">Başlık</th>
+            <th scope="col" width="20%">Eklenme Tarihi</th>
+            <th scope="col" width="20%">Güncellenme Tarihi</th>
+            <th scope="col" width="20%">#</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var post in Model)
+        {
+            <tr>
+                <td>@post.Title</td>
+                <td>@post.CreatedDate.ToString("dd.MM.yyyy HH:mm")</td>
+                <td>@post.UpdatedDate.ToString("dd.MM.yyyy HH:mm")</td>
+                <td>
+                    <a href="/admin/duzenle/@post.Id" class="btn btn-primary">Düzenle</a>
+                    <a href="/admin/sil/@post.Id" onclick="return confirm('Emin misin?')" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

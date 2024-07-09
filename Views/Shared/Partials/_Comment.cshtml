@@ -1,0 +1,88 @@
+﻿@model PostModel
+
+    <style>
+        
+
+        /* Styling for comments section */
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+    .comment {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+            li strong {
+                color: #444;
+            }
+
+        /* Styling for the form */
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+            form p {
+                margin: 10px 0;
+            }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+            input[type="text"]::placeholder,
+            textarea::placeholder {
+                color: #999;
+            }
+
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            button:hover {
+                background-color: #218838;
+            }
+
+    </style>
+
+
+<h2>Yorumlar</h2>
+<ul>
+    @foreach(var comment in Model.Comments)
+    {
+        <li class="comment"><strong>@comment.Name</strong> (@comment.CreatedDate.ToString("dd.MM.yyyy HH:mm")) diyor ki: @comment.Comment</li>
+    }
+</ul>
+
+<h2>Yorum Ekle</h2>
+<form asp-controller="Home" asp-action="YorumEkle" method="post" autocomplete="off">
+    <p><input required type="text" placeholder="Ad Soyad" name="Name"/></p>
+    <p><textarea required name="Comment" placeholder="Yorum"></textarea></p>
+    <input type="hidden" name="PostId" value="@Model.Post.Id"/>
+    <button>Gönder</button>
+</form>
